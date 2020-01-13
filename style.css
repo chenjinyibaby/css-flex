@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+.header {
+  display: flex;
+  /* border: 1px solid red; 
+ justify-content: space-between;/可以不写，在ul上加上margin-left：auto，推荐使用/ */
+  background: rgb(245, 245, 245);
+}
+ul {
+  display: flex;
+  border: 1px solid red;
+  margin-left: auto; /*推荐使用*/
+}
+ul > li {
+  /* border: 1px solid red; */
+  padding: 6px 0.5em;
+  line-height: 24px;
+}
+.logo {
+  display: flex;
+  /* border: 1px solid red; */
+  background: grey;
+  align-items: center; /*垂直方向居中*/
+}
+.logo > img {
+  height: 42px;
+  vertical-align: top;
+}
+.content {
+  display: flex;
+  min-width: 800px; /*一般不写死宽度，居中的话写死宽度，然后margin：0 auto；*/
+  margin-top: 10px;
+}
+.content > aside {
+  /* border: 1px solid red; */
+  width: 200px;
+  height: 400px;
+  background: yellow;
+}
+.content > main {
+  /* border: 1px solid red; */
+  flex-grow: 1;
+  height: 400px;
+  background: pink;
+}
+.content > .ad {
+  /* border: 1px solid red; */
+  width: 100px;
+  height: 400px;
+  background: skyblue;
+}
+.imageList {
+  /* outline: 1px solid green; */
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;这样会使第二排也变成空间对齐，所以不能使用，此时还是应该用-margin，所以添加一个x */
+}
+.imageList > .x {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -12px;
+}
+.imageList > .x > .image {
+  /* border: 1px solid pink; */
+  width: 191px;
+  height: 191px;
+  margin-top: 10px;
+  margin-right: 12px;
+  background: thistle;
+}
